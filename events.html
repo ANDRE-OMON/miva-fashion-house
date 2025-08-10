@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fashion House</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="script.js">
+  <style>
+
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 10px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #111;
+}
+
+.logo span {
+  color: #D96C6C;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 8px 14px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.nav-links li a:hover {
+  background-color: #D96C6C;
+  color: white;
+}
+
+/* Toggle Button for Mobile */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #111;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+
+
+.dark-theme {
+  background-color: #121212;
+  color: #f9f9f9;
+}
+
+.dark-theme .navbar,
+.dark-theme .about-section,
+.dark-theme .split-section,
+.dark-theme .product-feature,
+.dark-theme .testimonial-section,
+.dark-theme .newsletter-section,
+.dark-theme .site-footer {
+  background-color: #1e1e1e !important;
+  color: #eee !important;
+}
+
+.dark-theme .nav-links li a,
+.dark-theme .hero-btn,
+.dark-theme .about-btn,
+.dark-theme .shop-btn,
+.dark-theme .newsletter-form button {
+  background-color: #333 !important;
+  color: #f9f9f9 !important;
+  border-color: #555;
+}
+
+.dark-theme .nav-links li a:hover,
+.dark-theme .hero-btn:hover,
+.dark-theme .about-btn:hover,
+.dark-theme .shop-btn:hover,
+.dark-theme .newsletter-form button:hover {
+  background-color: #444 !important;
+  color: #fff !important;
+}
+
+.banner {
+  background: linear-gradient(to right, #bb377d, #fbd3e9);
+  color: white;
+  padding: 5rem 1rem;
+  text-align: center;
+
+}
+.banner-image{
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+button{
+  background-color: #bb377d;
+  color: #eee;
+  font-size: x-small;
+  font-family: poppins;
+  padding: 30 50px;
+  border-radius: 5px;
+  margin-top: 3px 5px;
+
+  
+
+}
+
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Fashion<span>House</span></div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="collections.html">Collections</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="board-of-trustees.html">Board of Trustees</a></li>
+      <li><a href="careers.html">Careers</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="news.html">News</a></li>
+      <li>
+  <button id="themeToggle" title="Toggle Theme" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">
+    🌙
+  </button>
+</li>
+    </ul>
+
+  </header>
+<div class="banner">
+  <h1>Upcoming Events</h1>
+  <p>Join us for our latest fashion events and showcases!</p>
+  <p>Stay tuned for more details.</p>
+  <p>Follow us on social media for updates.</p>
+  <button>Learn More</button>
+
+
+<img src="image/clark-street-mercantile-qnKhZJPKFD8-unsplash.jpg" alt="Events Banner" class="banner-image">
+</div>
+
+
+
+  
+
+
+  
+
+    
+    
+
+  <script src="script.js">
+   
+
+  </script>
+</body>
+</html>
